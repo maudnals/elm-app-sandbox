@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/maudnals/elm-app-sandbox.git",
   "author": "maudnals",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.12.1"
+  }
 }
