@@ -1,3 +1,4 @@
+// PACKAGE JSON
 {
   "name": "elm-app-sandbox",
   "version": "1.0.0",
@@ -23,3 +24,5 @@
     "webpack-dev-server": "^3.1.1"
   }
 }
+
+// WEBPACK CONFIG
