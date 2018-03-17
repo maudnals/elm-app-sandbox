@@ -6,6 +6,13 @@
   "author": "maudnals",
   "license": "MIT",
   "dependencies": {
-    "json-server": "^0.12.1"
+    "css-loader": "^0.28.11",
+    "elm-webpack-loader": "^4.5.0",
+    "file-loader": "^1.1.11",
+    "json-server": "^0.12.1",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.1.1",
+    "webpack-dev-server": "^3.1.1"
   }
 }
