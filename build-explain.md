@@ -30,6 +30,9 @@
 // WEBPACK CONFIG
 *REMEMBER THE LOADERS ARE APPLIED LAST TO FIRST IN THE ORDER THEY ARE LISTED in webpack config.*
 
+*The path module provides utilities for working with file and directory paths.*
+var path = require('path')
+
 */node_modules/ is a regexp. Anything that containes node_modules in its path will be excluded* 
 exclude: /node_modules/
 
