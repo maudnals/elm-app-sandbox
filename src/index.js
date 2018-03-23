@@ -2,8 +2,8 @@
 // index.js is the entry point that Webpack will look for when creating a bundle
 
 
-// require('ace-css/css/ace.css');
-// require('font-awesome/css/font-awesome.css');
+require('ace-css/css/ace.css');
+require('font-awesome/css/font-awesome.css');
 
 // why does this add the index.html to dist?? isn't index.js supposed to be the bundle??
 require('./index.html');
