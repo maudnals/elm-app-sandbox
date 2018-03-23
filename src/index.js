@@ -20,16 +20,20 @@ require('./index.html');
 
 // by convention, call it Main
 //http://faq.elm-community.org/#does-the-main-module-file-have-to-be-named-mainelm
-let Elm = require('./Main.elm');
+let ElmMain = require('./Main.elm');
 
 
 var mountNode = document.getElementById('main');
-// node we'll mount the app on
+// node to mount our Elm app on (dom node that will hold our app)
+// just like react!! and hyperapp!!!
+// how do we know which docuemnt we're referring to here???
+// well, this index.js will be transformed into app.js, whoch is itself included as script in index.html. simple!
 
 // HYPERAPP IS A TODO!!!!!!!!
 // ALSO REMEMBER, NEVER MOUNT ON BODY
 
 
-// why can we use DOM document here???
+var myApp = ElmMain.Main.embed(mountNode);
 
 
+// https://guide.elm-lang.org/interop/javascript.html
