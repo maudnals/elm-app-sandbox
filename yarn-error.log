@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /Users/d068996/.yarn/bin/yarn.js webpack
+  /usr/local/bin/node /Users/d068996/.yarn/bin/yarn.js api
 
 PATH: 
   /Users/d068996/.yarn/bin:/Users/d068996/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -6974,9 +6974,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 2
+  Exit code: 1
   Command: sh
-  Arguments: -c /Users/d068996/Code/_me/elm-app-sandbox/node_modules/.bin/webpack
+  Arguments: -c node api.js
   Directory: /Users/d068996/Code/_me/elm-app-sandbox
   Output:
   

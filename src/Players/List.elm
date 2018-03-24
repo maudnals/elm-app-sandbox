@@ -3,33 +3,47 @@ import Html exposing (..)
 import Html.Attributes exposing (class)
 import Msgs exposing (Msg)
 import Models exposing (Model, Player)
+import RemoteData exposing (WebData)
 
-view : List Player -> Html Msg
-view list =
+view : WebData (List Player) -> Html Msg
+view response =
   div []
     [ pageTitle,
       div []
       [
-        playerTable list
+        maybeTable response
       ]
     ]
 
-playerTable : List Player -> Html Msg
-playerTable list = 
-  div []
-    [ table []
-        [ thead []
-            [ tr []
-              [ th [] [ text "Id" ],
-                th [] [ text "Name" ],
-                th [] [ text "Level" ],
-                th [] [ text "Actions" ]
+maybeTable : WebData (List Player) -> Html Msg
+maybeTable response = 
+  case response of
+      RemoteData.NotAsked ->
+        div []
+          [ text ""
+          ]
+      RemoteData.Loading ->
+        div []
+          [ text "loading"
+          ] 
+      RemoteData.Success players->
+        div []
+          [ table []
+              [ thead []
+                  [ tr []
+                    [ th [] [ text "Id" ],
+                      th [] [ text "Name" ],
+                      th [] [ text "Level" ],
+                      th [] [ text "Actions" ]
+                    ]
+                  ],
+                tbody [] (List.map playerRow players)
               ]
-            ],
-          tbody [] (List.map playerRow list)
-        ]
-    ]
-
+          ]
+      RemoteData.Failure error ->
+        div []
+          [ text (toString error)
+          ] 
 
 playerRow : Player -> Html Msg
 playerRow player =
