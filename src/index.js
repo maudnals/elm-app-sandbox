@@ -37,3 +37,9 @@ var myApp = ElmMain.Main.embed(mountNode);
 
 
 // https://guide.elm-lang.org/interop/javascript.html
+
+
+// { model | players = response } ????
+
+
+// todo review logic flow
