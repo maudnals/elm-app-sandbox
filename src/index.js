@@ -29,8 +29,6 @@ var mountNode = document.getElementById('main');
 // how do we know which docuemnt we're referring to here???
 // well, this index.js will be transformed into app.js, whoch is itself included as script in index.html. simple!
 
-// HYPERAPP IS A TODO!!!!!!!!
-// ALSO REMEMBER, NEVER MOUNT ON BODY
 
 
 var myApp = ElmMain.Main.embed(mountNode);
